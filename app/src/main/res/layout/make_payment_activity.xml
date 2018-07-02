@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ddd"
+    tools:context=".MakePaymentActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar1"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ddd"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/android_card_view_example"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CUSTOMER DETAILS"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#ddd" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/cardview_image"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/ic_account_user" />
+
+
+                    <TextView
+                        android:id="@+id/nameView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/cardview_image"
+                        android:paddingBottom="5dp"
+                        android:text="Name: "
+                        android:textColor="#8b8b8b"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/namePlaceViewPayment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/nameView"
+                        android:paddingBottom="5dp"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp" />
+
+
+                    <TextView
+                        android:id="@+id/descriptionView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nameView"
+                        android:layout_toRightOf="@+id/cardview_image"
+                        android:paddingBottom="5dp"
+                        android:text="Location: "
+                        android:textColor="#8b8b8b"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/locationPlaceViewPayment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/namePlaceViewPayment"
+                        android:layout_toRightOf="@id/descriptionView"
+                        android:paddingBottom="5dp"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/numberView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/descriptionView"
+                        android:layout_toRightOf="@+id/cardview_image"
+                        android:paddingBottom="5dp"
+                        android:text="Number: "
+                        android:textColor="#8b8b8b"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/numberPlaceViewPayment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/locationPlaceViewPayment"
+                        android:layout_toRightOf="@id/numberView"
+                        android:paddingBottom="5dp"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/idView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/numberView"
+                        android:layout_toRightOf="@+id/cardview_image"
+                        android:paddingBottom="2dp"
+                        android:text="Customer ID: "
+                        android:textColor="#8b8b8b"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/idPlaceViewPayment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/numberPlaceViewPayment"
+                        android:layout_toRightOf="@id/idView"
+                        android:paddingBottom="2dp"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="-- BILLS DETAILS --"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/cardview_list_title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="false"
+                        android:paddingBottom="3dp"
+                        android:text="@string/bill_number"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/textViewBillNoPayment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/cardview_list_title1"
+                        android:layout_toRightOf="@id/cardview_list_title1"
+                        android:paddingBottom="3dp"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/cardview_list_title2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewBillNoPayment"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="2dp"
+                        android:text="@string/description"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/textViewDescriptionPayment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewBillNoPayment"
+                        android:layout_toEndOf="@id/cardview_list_title2"
+                        android:layout_toRightOf="@id/cardview_list_title2"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="2dp"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/cardview_list_title3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewDescriptionPayment"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="2dp"
+                        android:text="@string/original_account"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/textViewOriginalAcntPayment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewDescriptionPayment"
+                        android:layout_toEndOf="@id/cardview_list_title3"
+                        android:layout_toRightOf="@id/cardview_list_title3"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="2dp"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/cardview_list_title4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewOriginalAcntPayment"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="2dp"
+                        android:text="@string/balance"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/textViewBalancePayment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewOriginalAcntPayment"
+                        android:layout_toEndOf="@id/cardview_list_title4"
+                        android:layout_toRightOf="@id/cardview_list_title4"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="2dp"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                >
+
+                <TextView
+                    android:id="@+id/payText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="3dp"
+                    android:text="Pay With : "
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinnerPay"
+                    android:layout_width="wrap_content"
+                    android:layout_toRightOf="@id/payText"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_toEndOf="@id/payText" />
+
+                <TextView
+                    android:id="@+id/amountText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:paddingTop="5dp"
+                    android:layout_below="@id/spinnerPay"
+                    android:text="Amount : "
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTestAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:hint="    GHS 0.00         "
+                    android:layout_toRightOf="@id/amountText"
+                    android:layout_below="@id/spinnerPay"
+                    android:inputType="numberDecimal"
+                    android:textSize="15sp"
+                    android:layout_toEndOf="@id/amountText" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/btnPayBill"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:background="@color/btn_payment"
+        android:text="@string/pay"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        />
+    </RelativeLayout>
+
+</LinearLayout>

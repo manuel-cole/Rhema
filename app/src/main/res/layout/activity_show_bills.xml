@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.gamor.rhema.ShowBillsActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ddd"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar1"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/showBillsActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/android_card_view_example"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@color/colorPrimary">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/cardview_image"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_account_user" />
+
+
+                <TextView
+                    android:id="@+id/nameView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/cardview_image"
+                    android:paddingBottom="2dp"
+                    android:textColor="#8b8b8b"
+                    android:text="Name: "
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/namePlaceView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/nameView"
+                    android:text=""
+                    android:textSize="20sp"
+                    android:paddingBottom="2dp"
+                    android:textColor="@android:color/black" />
+
+
+                <TextView
+                    android:id="@+id/descriptionView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nameView"
+                    android:layout_toRightOf="@+id/cardview_image"
+                    android:text="Location: "
+                    android:paddingBottom="2dp"
+                    android:textColor="#8b8b8b"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/locationPlaceView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/namePlaceView"
+                    android:layout_toRightOf="@id/descriptionView"
+                    android:text=""
+                    android:textSize="20sp"
+                    android:paddingBottom="2dp"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/numberView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/descriptionView"
+                    android:layout_toRightOf="@+id/cardview_image"
+                    android:text="Number: "
+                    android:paddingBottom="2dp"
+                    android:textColor="#8b8b8b"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/numberPlaceView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/locationPlaceView"
+                    android:layout_toRightOf="@id/numberView"
+                    android:text=""
+                    android:textSize="20sp"
+                    android:paddingBottom="2dp"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/idView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/numberView"
+                    android:layout_toRightOf="@+id/cardview_image"
+                    android:text="Customer ID: "
+                    android:paddingBottom="2dp"
+                    android:textColor="#8b8b8b"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/idPlaceView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/numberPlaceView"
+                    android:layout_toRightOf="@id/idView"
+                    android:text=""
+                    android:textSize="20sp"
+                    android:paddingBottom="2dp"
+                    android:textColor="@android:color/black" />
+
+            </RelativeLayout>
+
+            </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/textViewBill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="--   BILLS   --"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/billListLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"
+            tools:ignore="MissingConstraints">
+
+            <!--<ScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:background="@color/white">-->
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/billList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" />
+            <!--<ProgressBar-->
+            <!--android:id="@+id/pb_loader1"-->
+            <!--android:layout_width="42dp"-->
+            <!--android:layout_height="42dp"-->
+            <!--android:layout_gravity="center"-->
+
+            <!--/>-->
+
+            <!--</ScrollView>-->
+        </FrameLayout>
+    </android.support.constraint.ConstraintLayout>
+    <!--<ProgressBar-->
+    <!--android:id="@+id/pb_loader1"-->
+    <!--android:layout_width="80dp"-->
+    <!--android:layout_height="80dp"-->
+    <!--android:layout_gravity="center"-->
+    <!---->
+    <!--/>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+    <ProgressBar
+        android:id="@+id/pb_loader"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:indeterminateDrawable="@drawable/my_progress"
+        android:visibility="gone"
+        />
+
+        <TextView
+            android:id="@+id/pb_loaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_below="@+id/pb_loader"
+            android:text="Loading Customer Bills"
+            android:textSize="22sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_error_message_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/error_message"
+            android:textSize="22sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+</LinearLayout>
